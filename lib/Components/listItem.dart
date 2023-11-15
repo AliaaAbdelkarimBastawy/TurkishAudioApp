@@ -14,6 +14,14 @@ class ListItem extends StatefulWidget {
 
 class _ListItemState extends State<ListItem> {
   bool isOpen = false;
+  AudioService audioService = new AudioService();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    audioService.initializeAudio(widget.model.Song);
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -49,7 +57,7 @@ class _ListItemState extends State<ListItem> {
                   onPressed: () {
                   setState(() {
                     isOpen = !isOpen;
-                    isOpen? AudioService.playAudio(widget.model.Song) : AudioService.stopAudio(widget.model.Song);
+                    isOpen? audioService.playAudio() : audioService.stopAudio();
                   });
 
                   },)),

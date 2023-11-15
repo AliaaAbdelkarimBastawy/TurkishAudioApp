@@ -17,6 +17,10 @@ class MainView extends StatelessWidget {
     Audio(Name: 'Yaramızda Kalsın', Image: 'assets/images/YaramızdaKalsın.jpeg', Song: 'assets/songs/YaramizdaKalsin.mp3'),
     Audio(Name: 'Çukurda Yandı', Image: 'assets/images/CukurdaYandi.jpeg', Song: 'assets/songs/CukurdaYandi.mp3'),
 
+    Audio(Name: 'Aramam', Image: 'assets/images/ARAMAM.jpeg', Song: 'assets/songs/ARAMAM.mp3'),
+    Audio(Name: 'Ateşe düştüm', Image: 'assets/images/atesedustum.jpeg', Song: 'assets/songs/Atese.mp3'),
+    Audio(Name: 'Leila', Image: 'assets/images/leila.jpeg', Song: 'assets/songs/leila.mp3'),
+
     // Add other audio items here
   ];
 
@@ -24,6 +28,7 @@ class MainView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         centerTitle: true,
         title: Text("Audio App"),
       ),
